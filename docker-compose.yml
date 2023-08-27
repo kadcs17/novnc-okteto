@@ -1,14 +1,14 @@
 services:
     ubuntu:
         public: true
-        container_name: vzletzx
+        container_name: vnc
         image: imlala/ubuntu-xfce-vnc-novnc:latest
         shm_size: "3gb"
         ports:
             - 6080:6080
         environment: 
-            - VNC_PASSWD=passwd
-            - GEOMETRY=1080x720
+            - VNC_PASSWD=123456
+            - GEOMETRY=1920x1080
             - TZ=Asia/Shanghai
             - DEPTH=24
         volumes: 
@@ -16,7 +16,7 @@ services:
             - /home
         resources:
           cpu: 1000m
-          memory: 3072Mi
+          memory: 2048Mi
           storage:
             size: 4Gi
             class: standard
